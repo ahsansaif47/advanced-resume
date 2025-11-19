@@ -1,22 +1,17 @@
 package parser
 
 import (
-	"bytes"
+	"fmt"
 	"image/png"
+	"os"
 
 	"github.com/gen2brain/go-fitz"
 )
 
 type Parser interface {
-	ExtractImages() ([]ImageData, error)
+	ExtractImages() error
 	Close() error
 }
-
-type ImageData struct {
-	page int
-	Data []byte
-}
-
 type FitzParser struct {
 	Doc *fitz.Document
 }
@@ -29,27 +24,34 @@ func NewFitzParser(path string) (*FitzParser, error) {
 	return &FitzParser{Doc: doc}, nil
 }
 
-func (p *FitzParser) ExtractImages() ([]ImageData, error) {
+func (p *FitzParser) ExtractAndSaveImages() error {
 	totalPages := p.Doc.NumPage()
 
-	outputImages := make([]ImageData, totalPages)
-	for i := 0; i < totalPages; i++ {
-		img, err := p.Doc.Image(i)
-		if err != nil {
-			return nil, err
-		}
+	outputDir := "/home/ahsansaif/projects/advanced-resume/resources/images"
 
-		buf := new(bytes.Buffer)
-		png.Encode(buf, img)
-
-		outputImages = append(outputImages, ImageData{
-			page: i,
-			Data: buf.Bytes(),
-		})
+	if _, err := os.Stat(outputDir); os.IsNotExist(err) {
 
 	}
 
-	return outputImages, nil
+	for i := 0; i < totalPages; i++ {
+		img, err := p.Doc.Image(i)
+		if err != nil {
+			return err
+		}
+
+		filePath := fmt.Sprintf("%s-page-%d.png", outputDir, i)
+		f, err := os.Create(filePath)
+		if err != nil {
+			return err
+		}
+
+		err = png.Encode(f, img)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
 
 func (p *FitzParser) Close() error {
