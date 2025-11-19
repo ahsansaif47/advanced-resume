@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"image/png"
 	"os"
+	"path/filepath"
 
 	"github.com/gen2brain/go-fitz"
 )
@@ -13,7 +14,8 @@ type Parser interface {
 	Close() error
 }
 type FitzParser struct {
-	Doc *fitz.Document
+	Doc  *fitz.Document
+	Name string
 }
 
 func NewFitzParser(path string) (*FitzParser, error) {
@@ -21,16 +23,21 @@ func NewFitzParser(path string) (*FitzParser, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &FitzParser{Doc: doc}, nil
+	return &FitzParser{
+		Doc:  doc,
+		Name: path,
+	}, nil
 }
 
 func (p *FitzParser) ExtractAndSaveImages() error {
 	totalPages := p.Doc.NumPage()
 
-	outputDir := "/home/ahsansaif/projects/advanced-resume/resources/images"
-
+	fileName := filepath.Base(p.Name)
+	outputDir := fmt.Sprintf("/home/ahsansaif/projects/advanced-resume/resources/images/%s", fileName)
 	if _, err := os.Stat(outputDir); os.IsNotExist(err) {
-
+		if err := os.MkdirAll(outputDir, 0755); err != nil {
+			return err
+		}
 	}
 
 	for i := 0; i < totalPages; i++ {
