@@ -39,7 +39,7 @@ func (p *FitzParser) ExtractAndSaveImages() error {
 			return err
 		}
 
-		filePath := fmt.Sprintf("%s-page-%d.png", outputDir, i)
+		filePath := fmt.Sprintf("%s/page-%d.png", outputDir, i)
 		f, err := os.Create(filePath)
 		if err != nil {
 			return err
