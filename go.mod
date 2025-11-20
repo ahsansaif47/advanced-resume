@@ -8,5 +8,6 @@ require (
 	github.com/ebitengine/purego v0.8.4 // indirect
 	github.com/gen2brain/go-fitz v1.24.15 // indirect
 	github.com/jupiterrider/ffi v0.5.0 // indirect
+	github.com/otiai10/gosseract/v2 v2.4.1
 	golang.org/x/sys v0.33.0 // indirect
 )
