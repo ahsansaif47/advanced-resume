@@ -2,6 +2,7 @@ package config
 
 import (
 	"log"
+	"os"
 	"path/filepath"
 	"sync"
 
@@ -9,6 +10,7 @@ import (
 )
 
 type Config struct {
+	GeminiAPIKey string
 }
 
 var Cfg Config
@@ -27,8 +29,10 @@ func GetConfig() Config {
 }
 
 func loadConfig() (Config, error) {
-	err := godotenv.Load(filepath.Join("..", ".env"))
+	err := godotenv.Load(filepath.Join("..", "..", ".env"))
 
-	return Config{}, err
+	return Config{
+		GeminiAPIKey: os.Getenv("GEMINI_API_KEY"),
+	}, err
 
 }

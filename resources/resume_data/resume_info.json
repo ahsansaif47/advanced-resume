@@ -1,0 +1,207 @@
+```json
+{
+  "personal_information": {
+    "name": "Ahsan Saif",
+    "title": "Senior Backend Developer - Golang, Python",
+    "tagline": "Motivated to make a difference. Always learning and innovating!",
+    "contact": {
+      "email": "ahsansaf047@gmail.com",
+      "phone": "03349504405",
+      "github": "https://github.com/ahsansaf47",
+      "linkedin": "https://www.linkedin.com/in/ahsan-saif"
+    }
+  },
+  "work_experience": [
+    {
+      "company": "AlphaSquad",
+      "location": "Islamabad, Pakistan",
+      "title": "Senior Golang developer",
+      "dates": "April 2025 - PRESENT",
+      "responsibilities": [
+        "Architected and developed service-oriented, scalable backend infrastructure for a real-time eCommerce platform, DotShop, ensuring reliability and performance under high-concurrency conditions.",
+        "Designed and implemented RESTful APIs using Golang, adhering to clean architecture principles and industry best practices for maintainability and performance.",
+        "Modeled and managed relational data using PostgreSQL with GORM, incorporating advanced indexing and query optimization for high-performance data access.",
+        "Integrated third-party services and APIs, including Stripe for payments and tax processing, Google Merchant Center for product feeds, Klaviyo for marketing automation, and SearchSpring for advanced product search and merchandising and Amazon SES for emails.",
+        "Developed and managed background job scheduling, enabling asynchronous processing of tasks such as order handling, data synchronization etc."
+      ]```json
+{
+  "personal_information": {
+    "name": "Ahsan Saif",
+    "title": "Senior Backend Developer - Golang, Python",
+    "tagline": "Motivated to make a difference. Always learning and innovating!",
+    "contact": {
+      "email": "ahsansaf047@gmail.com",
+      "phone": "03349504405",
+      "github": "https://github.com/ahsansaf47",
+      "linkedin": "https://www.linkedin.com/in/ahsan-saif"
+    }
+  },
+  "work_experience": [
+    {
+      "company": "AlphaSquad",
+      "location": "Islamabad, Pakistan",
+      "title": "Senior Golang developer",
+      "dates": "April 2025 - PRESENT",
+      "responsibilities": [
+        "Architected and developed service-oriented, scalable backend infrastructure for a real-time eCommerce platform, DotShop, ensuring reliability and performance under high-concurrency conditions.",
+        "Designed and implemented RESTful APIs using Golang, adhering to clean architecture principles and industry best practices for maintainability and performance.",
+        "Modeled and managed relational data using PostgreSQL with GORM, incorporating advanced indexing and query optimization for high-performance data access.",
+        "Integrated third-party services and APIs, including Stripe for payments and tax processing, Google Merchant Center for product feeds, Klaviyo for marketing automation, and SearchSpring for advanced product search and merchandising and Amazon SES for emails.",
+        "Developed and managed background job scheduling, enabling asynchronous processing of tasks such as order handling, data synchronization etc."
+      ]
+    },
+    {
+      "company": "Seeto Communications",
+      "location": "Remote",
+      "title": "Backend Developer - Golang + Python",
+      "dates": "January 2025 - April 2025",
+      "responsibilities": [
+        "Microservice in Golang to collect live streaming data from various exchanges using recurring background API calls.",
+        "Implement user-management to manage user sessions and data.",
+        "Python service to analyze the data using Machine Learning and generate signals.",
+        "Implement interconnection between python and Golang service using REST to manage interservice communications."
+      ]
+    }
+  ],
+  "skills": {
+    "backend_skills": [
+      "Golang",
+      "Python",
+      "RestAPI",
+      "Go/Fiber",
+      "Gin",
+      "Flask",
+      "gRPC",
+      "Kafka",
+      "Redis",
+      "PostgreSQL",
+      "MongoDB",
+      "TimescaleDB",
+      "JWT/Paseto",
+      "Debezium",
+      "GORM",
+      "sqlc",
+      "migrate",
+      "webhooks",
+      "websockets",
+      "Docker",
+      "Git",
+      "Github",
+      "Github Actions",
+      "Unit testing",
+      "API testing",
+      "Automated testing",
+      "testify",
+      "Postman"
+    ],
+    "data_skills": [
+      "Pandas",
+      "Numpy",
+      "Data-Structures",
+      "Algorithms",
+      "Complexity-Analysis",
+      "Object-oriented programming"
+    ],
+    "integrations": [
+      "Google Merchant (Google Retail)",
+      "Klaviyo",
+      "SearchSpring",
+      "Stripe",
+      "Twilio",
+      "Amazon SES"
+    ]
+  },
+  "education": [
+    {
+      "institution": "Comsats University Islamabad",
+      "location": "Islamabad",
+      "degree": "BSCS",
+      "dates": "February 2018 - January 2022"
+    },
+    {
+      "institution": "Punjab College of Science",
+      "location": "Blue Area Islamabad",
+      "degree": "FSC",
+      "dates": "August 2015 - March 2017"
+    }
+  ]
+}
+```
+    },
+    {
+      "company": "Seeto Communications",
+      "location": "Remote",
+      "title": "Backend Developer - Golang + Python",
+      "dates": "January 2025 - April 2025",
+      "responsibilities": [
+        "Microservice in Golang to collect live streaming data from various exchanges using recurring background API calls.",
+        "Implement user-management to manage user sessions and data.",
+        "Python service to analyze the data using Machine Learning and generate signals.",
+        "Implement interconnection between python and Golang service using REST to manage interservice communications."
+      ]
+    }
+  ],
+  "skills": {
+    "backend_skills": [
+      "Golang",
+      "Python",
+      "RestAPI",
+      "Go/Fiber",
+      "Gin",
+      "Flask",
+      "gRPC",
+      "Kafka",
+      "Redis",
+      "PostgreSQL",
+      "MongoDB",
+      "TimescaleDB",
+      "JWT/Paseto",
+      "Debezium",
+      "GORM",
+      "sqlc",
+      "migrate",
+      "webhooks",
+      "websockets",
+      "Docker",
+      "Git",
+      "Github",
+      "Github Actions",
+      "Unit testing",
+      "API testing",
+      "Automated testing",
+      "testify",
+      "Postman"
+    ],
+    "data_skills": [
+      "Pandas",
+      "Numpy",
+      "Data-Structures",
+      "Algorithms",
+      "Complexity-Analysis",
+      "Object-oriented programming"
+    ],
+    "integrations": [
+      "Google Merchant (Google Retail)",
+      "Klaviyo",
+      "SearchSpring",
+      "Stripe",
+      "Twilio",
+      "Amazon SES"
+    ]
+  },
+  "education": [
+    {
+      "institution": "Comsats University Islamabad",
+      "location": "Islamabad",
+      "degree": "BSCS",
+      "dates": "February 2018 - January 2022"
+    },
+    {
+      "institution": "Punjab College of Science",
+      "location": "Blue Area Islamabad",
+      "degree": "FSC",
+      "dates": "August 2015 - March 2017"
+    }
+  ]
+}
+```
