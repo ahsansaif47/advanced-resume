@@ -8,8 +8,8 @@ import (
 )
 
 type IWeaviateRepository interface {
-	InsertData(className string, props map[string]any) (string, error)
-	BatchInsert(className string, items []map[string]any) error
+	AddNewResume(className string, props map[string]any) (string, error)
+	BatchAddResume(className string, items []map[string]any) error
 	VectorSearch(className, query string) (any, error)
 }
 
@@ -25,7 +25,7 @@ func NewWeviateRepository(ctx context.Context, client *weaviate.Client) IWeaviat
 	}
 }
 
-func (r *WeaviateRepository) InsertData(className string, props map[string]any) (string, error) {
+func (r *WeaviateRepository) AddNewResume(className string, props map[string]any) (string, error) {
 	model, err := r.Client.Data().Creator().WithClassName(className).WithProperties(props).Do(r.ctx)
 	if err != nil {
 		return "", err
@@ -34,7 +34,7 @@ func (r *WeaviateRepository) InsertData(className string, props map[string]any) 
 	return model.Object.ID.String(), nil
 }
 
-func (r *WeaviateRepository) BatchInsert(className string, items []map[string]any) error {
+func (r *WeaviateRepository) BatchAddResume(className string, items []map[string]any) error {
 
 	batch := r.Client.Batch().ObjectsBatcher()
 	for _, item := range items {
@@ -45,9 +45,6 @@ func (r *WeaviateRepository) BatchInsert(className string, items []map[string]an
 	}
 
 	_, err := batch.Do(r.ctx)
-
-	// TODO: Complete this function
-
 	return err
 }
 

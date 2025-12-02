@@ -3,8 +3,8 @@ package controllers
 import "github.com/ahsansaif47/advanced-resume/internal/storage/weaviate"
 
 type IWeaviateService interface {
-	InsertData(resumeData map[string]any) (string, error)
-	BatchInsert(batchResume []map[string]any) error
+	AddNewResume(resumeData map[string]any) (string, error)
+	BatchAddResume(batchResume []map[string]any) error
 	VectorSearch(query string) (any, error)
 }
 
@@ -18,13 +18,12 @@ func NewWeaviateService(repo weaviate.IWeaviateRepository) IWeaviateService {
 	}
 }
 
-func (s *WeaviateService) InsertData(resumeData map[string]any) (string, error) {
-	return s.repo.InsertData("resume", resumeData)
+func (s *WeaviateService) AddNewResume(resumeData map[string]any) (string, error) {
+	return s.repo.AddNewResume("resume", resumeData)
 }
 
-func (s *WeaviateService) BatchInsert(batchResume []map[string]any) error {
-	return s.repo.BatchInsert("resume", batchResume)
-
+func (s *WeaviateService) BatchAddResume(batchResume []map[string]any) error {
+	return s.repo.BatchAddResume("resume", batchResume)
 }
 
 func (s *WeaviateService) VectorSearch(query string) (any, error) {
