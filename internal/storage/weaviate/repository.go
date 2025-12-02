@@ -45,6 +45,9 @@ func (r *WeaviateRepository) BatchInsert(className string, items []map[string]an
 	}
 
 	_, err := batch.Do(r.ctx)
+
+	// TODO: Complete this function
+
 	return err
 }
 
